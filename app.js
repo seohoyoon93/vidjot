@@ -19,13 +19,13 @@ require('./config/passport')(passport)
 
 // Databse Config
 const db = require('./config/database')
-console.log(db.mongoURI)
+console.log("MongoDB URI: " + db.mongoURI)
 // Connect to mongoose
 mongoose.connect(db.mongoURI, {
   useNewUrlParser: true
 }).then(() => {
   console.log('MongoDB Connected...')
-}).catch(err => console.log(err))
+}).catch(err => console.log("Having an error connecting MongoDB: " + err))
 
 // Handlebars Middleware
 app.engine('handlebars', exphbs({
