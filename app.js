@@ -19,7 +19,7 @@ require('./config/passport')(passport)
 
 // Databse Config
 const db = require('./config/database')
-
+console.log(db.mongoURI)
 // Connect to mongoose
 mongoose.connect(db.mongoURI, {
   useNewUrlParser: true
