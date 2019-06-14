@@ -26,7 +26,7 @@ router.get('/', ensureAuthenticated, (req, res) => {
 
 // Add Idea Form
 router.get('/add', ensureAuthenticated, (req, res) => {
-  res.render('/add')
+  res.render('ideas/add')
 })
 
 // Edit Idea Form
